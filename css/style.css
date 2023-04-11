@@ -1,0 +1,457 @@
+  /* Drop-Down Section */
+
+  .dropbtn {
+    background-color: #2980B9;
+    color:white;
+    padding:4px 4px;
+    font-size:16px;
+    border:none;
+    cursor:pointer;
+    margin-top:2px;
+  }
+
+  .dropbtn:hover, .dropbtn:focus {
+    background-color:#00FA9A;
+    color:black;
+  }
+
+  .dropdown {
+    position:relative;
+    display:inline-block;
+  }
+
+  .dropdown-content {
+    display:none;
+    position:absolute;
+    background-color:#2F4F4F;
+    min-width:160px;
+    overflow:auto;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:1;
+    border-radius: 10px;
+  }
+
+  .dropdown-content a {
+    color:black;
+    padding:12px 16px;
+    text-decoration:none;
+    display:block;
+  }
+
+  .dropdown a:hover {
+    background-color:#0c0c0c;
+    text-decoration:none;
+  }
+
+  .show {display:block;}
+
+
+  /* Button */
+  .button {
+    background-color: dodgerblue; /* blue */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .button1 {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+  .button1:hover {
+    background-color: #363636;
+    color: white;
+  }
+
+
+
+
+
+
+/* Link Color */
+a:link {
+  color:#0682ff ;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color:#1E90FF ;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: light;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: #00BFFF;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+/* Content Animation */
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+
+/* Extra Content Animation */
+.revealx{
+  position: relative;
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+
+.revealx.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.revealy{
+  position: relative;
+  transform: translateX(55px);
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+
+.revealy.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.revealz{
+  position: relative;
+  transform: translateY(-150px);
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+
+.revealz.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+
+
+/* Centered Content */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
+
+/* Animated Button */
+.abutton {
+  border-radius: 38px;
+  background-color: dodgerblue;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 22px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.abutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.abutton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.abutton:hover span {
+  padding-right: 25px;
+}
+
+.abutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+/* Animated Text Section */
+.acontainer{
+  max-width: 1170px;
+  width: 100%;
+  margin:auto;
+}
+
+.home{
+  height: 80vh;
+  background-image: url("");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding:50px 15px;
+  position: relative;
+}
+.home::before{
+  content: '';
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 1;
+}
+
+.home .home-text{
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.home .home-text h1{
+ color:#ffffff;
+ font-size: 50px;
+ color:#ffffff;
+ line-height: 56px;
+ font-weight: 700;
+ margin:0 0 20px;
+}
+.home .home-text p{
+ margin:0;
+ overflow: hidden;
+}
+.home .home-text p span{
+   font-size: 40px;
+   color:dodgerblue;
+   font-weight: 700;
+   display: inline-block;
+   line-height: 46px;
+   display: none;
+}
+
+.home .home-text p span.text-in{
+ display: block;
+ animation: textIn .5s ease;
+}
+.home .home-text p span.text-out{
+ animation: textOut .5s ease;
+}
+@keyframes textIn{
+ 0%{
+   transform: translateY(100%);
+ }
+ 100%{
+   transform: translateY(0%);
+ }
+}
+@keyframes textOut{
+ 0%{
+   transform: translateY(0%);
+ }
+ 100%{
+   transform: translateY(-100%);
+
+ }
+}
+
+
+
+
+
+/* Read Article Button */
+.rbtn {
+  border: 2px solid black;
+  border-radius: 38px;
+  background-color: rgb(44, 44, 44);
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.info {
+  border-color: #4070F4;
+  color: #4070F4;
+}
+
+.info:hover {
+  background: #4070F4;
+  color: white;
+}
+
+
+
+
+
+/* Footer Content Section */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 40px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    background-color: #00FA9A;
+    color:black;
+    text-decoration: none;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+
+.fa-vimeo {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+
+.fa-vine {
+  background: #00b489;
+  color: white;
+}
+
+.fa-foursquare {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-stumbleupon {
+  background: #eb4924;
+  color: white;
+}
+
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
+
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+
+
+
+
+
+
